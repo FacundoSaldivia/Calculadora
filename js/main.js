@@ -12,7 +12,7 @@ function printOutput(num) {
    if (num == ''){
       document.getElementById('output-value').innerText = num;
    } else {
-      document.getElementById('output-value').innerText = getFormatedNumber(num);  
+      document.getElementById('output-value').innerText = (num);  
    }
 }
 // esta funcion hace que el numero que devuelva sea con como (2mil seria 2.000 en vez de 2000)
@@ -35,7 +35,7 @@ for (var i = 0; i < operator.length; i++){
          printOutput('');
          printHistory('');
       } else if (this.id == 'backspace'){
-         var output = reverseNumberFormat(getOutput()).toString();
+         var output = getOutput().toString();
          if (output){
             output = output.substr(0,output.length-1);
             printOutput(output);
@@ -50,7 +50,7 @@ for (var i = 0; i < operator.length; i++){
          }
          if (output != '' || history != ''){
             output = output == '' ? 
-            output:reverseNumberFormat(output);
+            output:output;
             history += output;
             if (this.id == '='){
                var result = eval(history);
@@ -70,7 +70,7 @@ for (var i = 0; i < operator.length; i++){
 var number = document.getElementsByClassName('number');
 for (var i = 0; i < number.length; i++){
    number[i].addEventListener('click', function(){
-      var output = reverseNumberFormat(getOutput());
+      var output = getOutput();
       if(output != NaN){ // si es un numero
          output += this.id;
          printOutput(output)
