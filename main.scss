@@ -38,17 +38,17 @@ body {
 
     .history {
       text-align: right;
-      height: 20px;
+      height: 40px;
       margin: 0 20px;
       padding-top: 20px;
-      font-size: 15px;
+      font-size: 30px;
       color: #919191;
     }
     .output {
       text-align: right;
       height: 60px;
-      margin: 10px 20px;
-      font-size: 30px;
+      margin: 50px 20px;
+      font-size: 50px;
     }
   }
   .keyboard {
@@ -93,6 +93,37 @@ body {
     .number:focus,
     .empty:focus {
       outline: 0;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+  .calculator {
+    height: 100%;
+    .result {
+      height: 160px;
+
+      .history {
+        height: 40px;
+        margin: 0 20px;
+        padding-top: 20px;
+      }
+      .output {
+        height: 60px;
+        margin: 50px 20px;
+      }
+      .keyboard {
+        height: 400px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        align-items: center;
+        justify-items: center;
+        padding-bottom: 0;
+      }
     }
   }
 }
