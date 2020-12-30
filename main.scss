@@ -116,14 +116,9 @@ body {
         height: 60px;
         margin: 50px 20px;
       }
-      .keyboard {
-        height: 400px;
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        align-items: center;
-        justify-items: center;
-        padding-bottom: 0;
-      }
+    }
+    .keyboard {
+      height: 70%;
     }
   }
 }
