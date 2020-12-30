@@ -104,6 +104,7 @@ body {
   }
   .calculator {
     height: 100%;
+
     .result {
       height: 160px;
 
@@ -119,6 +120,7 @@ body {
     }
     .keyboard {
       height: 70%;
+      -webkit-tap-highlight-color: transparent;
     }
   }
 }
