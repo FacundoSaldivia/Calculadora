@@ -1,0 +1,98 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Share Tech", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: rgb(184, 165, 137);
+  background: linear-gradient(
+    322deg,
+    rgba(184, 165, 137, 1) 0%,
+    rgba(23, 22, 21, 1) 100%
+  );
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  width: 450px;
+  height: 700px;
+  background-color: rgba($color: #3e3e3e, $alpha: 0.5);
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  .result {
+    height: 200px;
+
+    .history {
+      text-align: right;
+      height: 20px;
+      margin: 0 20px;
+      padding-top: 20px;
+      font-size: 15px;
+      color: #919191;
+    }
+    .output {
+      text-align: right;
+      height: 60px;
+      margin: 10px 20px;
+      font-size: 30px;
+    }
+  }
+  .keyboard {
+    height: 500px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    justify-items: center;
+
+    .operator,
+    .number,
+    .empty {
+      font-weight: 700;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border-width: 0;
+      margin: 15px;
+      float: left;
+    }
+    .number {
+      background-color: rgb(230, 157, 22);
+    }
+    .empty {
+      background-color: transparent;
+    }
+    .number,
+    .operator {
+      cursor: pointer;
+    }
+    .number:hover,
+    .operator:hover {
+      cursor: pointer;
+      opacity: 0.9;
+      transition: 0.1s;
+    }
+    .number:active,
+    .operator:active {
+      font-size: 13px;
+    }
+    .operator:focus,
+    .number:focus,
+    .empty:focus {
+      outline: 0;
+    }
+  }
+}

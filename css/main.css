@@ -1,0 +1,102 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Share Tech", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #b8a589;
+  background: linear-gradient(322deg, #b8a589 0%, #171615 100%);
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  width: 450px;
+  height: 700px;
+  background-color: rgba(62, 62, 62, 0.5);
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.calculator .result {
+  height: 200px;
+}
+
+.calculator .result .history {
+  text-align: right;
+  height: 20px;
+  margin: 0 20px;
+  padding-top: 20px;
+  font-size: 15px;
+  color: #919191;
+}
+
+.calculator .result .output {
+  text-align: right;
+  height: 60px;
+  margin: 10px 20px;
+  font-size: 30px;
+}
+
+.calculator .keyboard {
+  height: 500px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.calculator .keyboard .operator,
+.calculator .keyboard .number,
+.calculator .keyboard .empty {
+  font-weight: 700;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border-width: 0;
+  margin: 15px;
+  float: left;
+}
+
+.calculator .keyboard .number {
+  background-color: #e69d16;
+}
+
+.calculator .keyboard .empty {
+  background-color: transparent;
+}
+
+.calculator .keyboard .number,
+.calculator .keyboard .operator {
+  cursor: pointer;
+}
+
+.calculator .keyboard .number:hover,
+.calculator .keyboard .operator:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.1s;
+}
+
+.calculator .keyboard .number:active,
+.calculator .keyboard .operator:active {
+  font-size: 13px;
+}
+
+.calculator .keyboard .operator:focus,
+.calculator .keyboard .number:focus,
+.calculator .keyboard .empty:focus {
+  outline: 0;
+}
