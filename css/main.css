@@ -97,14 +97,13 @@ body {
 
 .calculator .keyboard .number:hover,
 .calculator .keyboard .operator:hover {
-  cursor: pointer;
   opacity: 0.9;
   transition: 0.1s;
 }
 
 .calculator .keyboard .number:active,
 .calculator .keyboard .operator:active {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .calculator .keyboard .operator:focus,

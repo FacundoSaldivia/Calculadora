@@ -91,13 +91,12 @@ body {
     }
     .number:hover,
     .operator:hover {
-      cursor: pointer;
       opacity: 0.9;
       transition: 0.1s;
     }
     .number:active,
     .operator:active {
-      font-size: 13px;
+      font-size: 16px;
     }
     .operator:focus,
     .number:focus,
